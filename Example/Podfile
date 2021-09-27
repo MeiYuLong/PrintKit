@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'PrintKit_Example' do
+  pod 'PrintKit', :path => '../'
+
+  target 'PrintKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

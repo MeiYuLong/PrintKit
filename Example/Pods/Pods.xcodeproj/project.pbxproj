@@ -73,7 +73,7 @@
 		9941730C753549E9F061EA66F7CCA827 /* FP_Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34310426BBE9E982A4200E4AC1A5CE /* FP_Define.swift */; };
 		99E26929C4E39F8723959720EA472DE7 /* MYL_Jewelry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 488382D30611D43D5625FAF4B59FAAA6 /* MYL_Jewelry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C7259AD452D41F257266BEE75F3E791 /* FPTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA9B36397EAF0922771DD11B6D0899D /* FPTipsView.swift */; };
-		9E644788005747F0D26B8D56CD8DA6D1 /* PrintLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0D92E2B48E536C99386E21D22AEBEF5 /* PrintLocalizable.strings */; };
+		9E644788005747F0D26B8D56CD8DA6D1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0D92E2B48E536C99386E21D22AEBEF5 /* Localizable.strings */; };
 		9F02B44BE91BFDB8ADAE72FF2DBCAFF0 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C294864BA4AE4DD07240D6AD500982 /* ConstraintItem.swift */; };
 		A103E340D711E28B86E3725782A90BC1 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6350F53951ECD1DFBCA844162D156D5 /* LayoutConstraint.swift */; };
 		A28F553B66D44FA50B266F291E479468 /* PrintKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4D176A44BFCDFF1042430ACDCA3C89 /* PrintKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -200,7 +200,7 @@
 		06882364A451D574A1285AEC889AEE79 /* CodeSignature */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = CodeSignature; sourceTree = "<group>"; };
 		0CEA594116FE56B8B4CD07BCDF25ACA7 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Source/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		0EAB801FE52648D12474FF4E6EF5C80D /* Pods-PrintKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrintKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		0F37B0F7FA8F5AD3631E1D261FC4120E /* PrintLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = PrintLocalizable.strings; path = ms.lproj/PrintLocalizable.strings; sourceTree = "<group>"; };
+		0F37B0F7FA8F5AD3631E1D261FC4120E /* PrintLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = PrintLocalizable.strings; path = ms.lproj/Localizable.strings; sourceTree = "<group>"; };
 		115A20A33931F4995E30E65ED4B6B62F /* NSString+FscKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+FscKit.m"; sourceTree = "<group>"; };
 		117502EFF7881FCD8948562E031908EF /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12467B0B667B4DFB2C6AF74A9AEE1101 /* MYL_Jewelry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MYL_Jewelry.release.xcconfig; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 		40FE917654B3BAE03C2D8CA9345FF824 /* Pods-PrintKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrintKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		41AFF2303EA06292A6B33321393E1F8F /* MBProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBProgressHUD-Info.plist"; sourceTree = "<group>"; };
 		4230BB2134CD2C34AE7C00000C40C83A /* Pods-PrintKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrintKit_Example-Info.plist"; sourceTree = "<group>"; };
-		42A8FF4168C353F1289E3B4DBBAA75BD /* PrintLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = PrintLocalizable.strings; path = "zh-Hant.lproj/PrintLocalizable.strings"; sourceTree = "<group>"; };
+		42A8FF4168C353F1289E3B4DBBAA75BD /* PrintLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = PrintLocalizable.strings; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		44003B8107B7F790E906BA6CE095E585 /* CodeDirectory */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = CodeDirectory; sourceTree = "<group>"; };
 		443CED8627181716883C86CA2A33B4CE /* Draw_UIView+FrameExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Draw_UIView+FrameExtension.swift"; path = "MYL_Jewelry/Classes/Support/Draw_UIView+FrameExtension.swift"; sourceTree = "<group>"; };
 		46F00D46940C7EC810E0210ADF95D73F /* FPAlisonService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FPAlisonService.swift; sourceTree = "<group>"; };
@@ -298,7 +298,7 @@
 		A337E64358A566CA4C14642B752E0AD0 /* MYL_Jewelry.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MYL_Jewelry.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7833FA67ED40108C8F01F1B47EBAB54 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
 		A9E471E8F670898EF3D7CCD9B4B5F4DF /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
-		AABF195EBEE563DFB0D1FD36B189330B /* PrintLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = PrintLocalizable.strings; path = "zh-Hans.lproj/PrintLocalizable.strings"; sourceTree = "<group>"; };
+		AABF195EBEE563DFB0D1FD36B189330B /* PrintLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = PrintLocalizable.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		ABD6ACCB7BC817668516BEA85FC25FD8 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 		AD9FDB42D01B2378404C7F1A8A97563F /* MYL_Jewelry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MYL_Jewelry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B101E013545C50FF74ED13B670E72DC7 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
@@ -309,8 +309,8 @@
 		B667C40760901565CA2DD76270BE04F6 /* Pods-PrintKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrintKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		B6F4419ECAA19C0BB54F0634DF368A5A /* Pods-PrintKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrintKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		B7B20C0AF2AFD9711CEFDC1B76C4A391 /* FPBaseProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FPBaseProtocol.swift; sourceTree = "<group>"; };
-		BBCA49EE488E0C7654DC5587743930EA /* PrintLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = PrintLocalizable.strings; path = en.lproj/PrintLocalizable.strings; sourceTree = "<group>"; };
-		BCA9DD9A57113929B06233532DD45440 /* PrintLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = PrintLocalizable.strings; path = "th-TH.lproj/PrintLocalizable.strings"; sourceTree = "<group>"; };
+		BBCA49EE488E0C7654DC5587743930EA /* PrintLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = PrintLocalizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BCA9DD9A57113929B06233532DD45440 /* PrintLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = PrintLocalizable.strings; path = "th-TH.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BDC3BFE1E2430A715AAC8005BA7BA8E1 /* FPBaseModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FPBaseModel.swift; sourceTree = "<group>"; };
 		BF8096651B8ECC4C885F5B677B36934F /* PrintKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PrintKit.debug.xcconfig; sourceTree = "<group>"; };
 		C77A79B8E7A6C837D376195CA8D2577E /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
@@ -336,7 +336,7 @@
 		E502ABF865144F2F9272C661DAB05430 /* FPPrintTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FPPrintTool.swift; sourceTree = "<group>"; };
 		E8E80E4A466F8505B84428BE86E1A64D /* FP_UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "FP_UIColor+Extension.swift"; sourceTree = "<group>"; };
 		EA12A79AA26D3167473E57F51D7202E0 /* Pods_PrintKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrintKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA40EE6684829688D07485B5852DEE80 /* PrintLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = PrintLocalizable.strings; path = vi.lproj/PrintLocalizable.strings; sourceTree = "<group>"; };
+		EA40EE6684829688D07485B5852DEE80 /* PrintLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = PrintLocalizable.strings; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC520EAF1ACBC7DBF63061B4136C83AF /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		EDCBF96239C075C2731BA525AE382424 /* Pods-PrintKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrintKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		F0CCEBAD264621BAC16D93AE1E7AF4C5 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
@@ -540,7 +540,7 @@
 			isa = PBXGroup;
 			children = (
 				245166B358FAE89D9B48C7D316808B9E /* PrintKit.xcassets */,
-				E0D92E2B48E536C99386E21D22AEBEF5 /* PrintLocalizable.strings */,
+				E0D92E2B48E536C99386E21D22AEBEF5 /* Localizable.strings */,
 				C4C2D1EC3BA84A03DA05975849D24D6E /* business */,
 				68DA8A1A73EA592CFE371AAB22390E1F /* Frameworks */,
 				43E0B4665290C3818A01F8A68C680851 /* Pod */,
@@ -1177,7 +1177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD33C8009B7755383D56CB5FAA7125A /* PrintKit.xcassets in Resources */,
-				9E644788005747F0D26B8D56CD8DA6D1 /* PrintLocalizable.strings in Resources */,
+				9E644788005747F0D26B8D56CD8DA6D1 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1441,7 +1441,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E0D92E2B48E536C99386E21D22AEBEF5 /* PrintLocalizable.strings */ = {
+		E0D92E2B48E536C99386E21D22AEBEF5 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BBCA49EE488E0C7654DC5587743930EA /* PrintLocalizable.strings */,
@@ -1451,7 +1451,7 @@
 				AABF195EBEE563DFB0D1FD36B189330B /* PrintLocalizable.strings */,
 				42A8FF4168C353F1289E3B4DBBAA75BD /* PrintLocalizable.strings */,
 			);
-			name = PrintLocalizable.strings;
+			name = Localizable.strings;
 			path = PrintKit/Assets;
 			sourceTree = "<group>";
 		};

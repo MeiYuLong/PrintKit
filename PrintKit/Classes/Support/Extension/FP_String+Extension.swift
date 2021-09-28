@@ -26,7 +26,7 @@ extension String {
            let bundle1 = Bundle(path: bundlePath) {
             finalBundle = bundle1
         }
-        let content = NSLocalizedString(self, tableName: "PrintLocalizable", bundle: finalBundle, value: "", comment: "")
+        let content = NSLocalizedString(self, tableName: "Localizable", bundle: finalBundle, value: "", comment: "")
         return content
     }
     

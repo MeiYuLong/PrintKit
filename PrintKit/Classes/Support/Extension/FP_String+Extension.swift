@@ -8,9 +8,9 @@
 import Foundation
 
 extension String {
-    class NoUser {}
+    class FP_NoUser {}
     var FP_Locale: String {
-        guard let bundlePath = Bundle(for: NoUser.self).resourcePath else { return self }
+        guard let bundlePath = Bundle(for: FP_NoUser.self).resourcePath else { return self }
         guard let bundle = Bundle(path: bundlePath + "/PrintKit.bundle") else {
             return self
         }

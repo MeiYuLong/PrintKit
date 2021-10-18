@@ -147,7 +147,7 @@ class ViewController: UIViewController {
         let total = printTicketArray.count
         for (index,model) in printTicketArray.enumerated() {
             if !model.status {
-                let image = FPPaintManager.draw365Label(type: .p3, data: model.data!, 10)
+                let image = FPPaintManager.draw365Label(type: .P3, data: model.data!, 10)
                 self.printTicketData(model: model, image: image, index: index, total: total)
                 return
             }

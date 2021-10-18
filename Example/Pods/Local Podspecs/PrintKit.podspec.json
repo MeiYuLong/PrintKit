@@ -1,6 +1,6 @@
 {
   "name": "PrintKit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "summary": "365Print & PrintKit.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/MeiYuLong/PrintKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MeiYuLong/PrintKit",
-    "tag": "0.0.3"
+    "tag": "0.0.4"
   },
   "platforms": {
     "ios": "10.0"

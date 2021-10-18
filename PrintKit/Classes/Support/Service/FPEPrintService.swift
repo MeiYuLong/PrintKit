@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FlashPainterKit
 
 class FPEPrintService: FPServiceBase {
     #if !(arch(x86_64) || arch(i386))
@@ -56,9 +57,9 @@ class FPEPrintService: FPServiceBase {
         guard let image = data as? UIImage, let peripheral = self.connectedPeripheral else { return }
         switch peripheral.type {
         case .ePrintP2:
-            printP2(image: image)
+            printP2(image: FPPaintManager.checkImageSize(image: image, type: .P2))
         case .ePrintP3:
-            printP3(image: image)
+            printP3(image: FPPaintManager.checkImageSize(image: image, type: .P3))
         default:
             break
         }
@@ -108,7 +109,6 @@ extension FPEPrintService {
             printer.write(withBytes: printer.enableP2())
             var sendData = Data.init()
             sendData.append(printer.printerWakeP2())
-            sendData.append(printer.printLinedotsP2(10))
             sendData.append(printer.drawGraphicP2(image))
             sendData.append(printer.printLinedotsP2(70))
             printer.write(withBytes: sendData)

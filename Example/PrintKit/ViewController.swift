@@ -8,7 +8,7 @@
 
 import UIKit
 import PrintKit
-import MYL_Jewelry
+import FlashPainterKit
 import MBProgressHUD
 
 class ViewController: UIViewController {
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let data = FDTicketLabelData()
+        let data = FPTicketLabelData()
         data.src_name = "寄件人姓名"
         data.src_phone = "142352365467"
         data.src_abbreviation = "THH"
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         model.data = data
 //        self.printTicketArray.append(model)
         
-        let data1 = FDTicketLabelData()
+        let data1 = FPTicketLabelData()
         data1.src_name = "菲律宾 Paálam"
         data1.src_phone = "123423456347"
         data1.src_abbreviation = "THH"
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         model1.data = data1
 //        self.printTicketArray.append(model1)
         
-        let data2 = FDTicketLabelData()
+        let data2 = FPTicketLabelData()
         data2.src_name = "老挝 ຕອນບ່າຍ"
         data2.src_phone = "123423456347"
         data2.src_abbreviation = "THH"
@@ -104,7 +104,7 @@ class ViewController: UIViewController {
         model2.data = data2
         self.printTicketArray.append(model2)
         
-        let data3 = FDTicketLabelData()
+        let data3 = FPTicketLabelData()
         data3.src_name = "马来语 பீச்சென்"
         data3.src_phone = "123423456347"
         data3.src_abbreviation = "THH"
@@ -147,7 +147,7 @@ class ViewController: UIViewController {
         let total = printTicketArray.count
         for (index,model) in printTicketArray.enumerated() {
             if !model.status {
-                let image = FlashDrawManager.drawPNOLabel(data: model.data!, 20)
+                let image = FPPaintManager.draw365Label(type: .p3, data: model.data!, 10)
                 self.printTicketData(model: model, image: image, index: index, total: total)
                 return
             }
@@ -183,6 +183,6 @@ class ViewController: UIViewController {
 class PrintTestModel {
     var status: Bool = false
     var image: UIImage?
-    var data: FDTicketLabelData?
+    var data: FPTicketLabelData?
 }
 

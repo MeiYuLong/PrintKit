@@ -1,15 +1,15 @@
 //
-//  EPrintDraw.swift
-//  MYL_Jewelry
+//  EPPaint.swift
+//  FlashPainterKit
 //
-//  Created by yulong mei on 2021/5/13.
+//  Created by yulong mei on 2021/9/24.
 //
 
 import Foundation
 
-internal class EPrintDraw {
+internal class EPPaint {
     
-    static let shared = EPrintDraw()
+    static let shared = EPPaint()
     
     var multiple:CGFloat = 1
     var barcodeHeight: CGFloat = 85
@@ -43,20 +43,24 @@ internal class EPrintDraw {
         bgView.frame = CGRect.init(x: 0, y: 0, width: bgSize.width, height: bgSize.height)
     }
     
-    /// 365Print绘制
-    public func draw365Label(data: FDLabelBaseData, _ bottomMargin: CGFloat) -> UIImage {
+    /// 365Print绘制, edge: UIEdgeInsets = .zero)
+    public func draw365Label(type: EPPrinterType = .P2, data: FPLabelBaseData,  bottom: CGFloat) -> UIImage {
+        bgWidth = type.rawValue
+        bgSize = CGSize.init(width: bgWidth, height: bgHeight)
+        let _ = bgView.subviews.map{ $0.removeFromSuperview() }
+        bgView.frame = CGRect.init(x: 0, y: 0, width: bgSize.width, height: bgSize.height)
+        
         x = 0
         y = 0
-        let _ = bgView.subviews.map{ $0.removeFromSuperview() }
         self.drawAddressInfo(data: data, type: .SRC)
         self.drawAddressInfo(data: data, type: .DST)
         self.drawRemark(data: data)
-        return self.drawImage()
+        return self.drawImage(bottom: bottom)
     }
-    
-    private func drawImage(_ bottomMargin: CGFloat = 0) -> UIImage {
+
+    private func drawImage(bottom: CGFloat = 0) -> UIImage {
         //重新计算总高度
-        bgView.frame = CGRect.init(x: 0, y: 0, width: bgSize.width, height: y + bottomMargin)
+        bgView.frame = CGRect.init(x: 0, y: 0, width: bgSize.width, height: y + bottom)
         
         UIGraphicsBeginImageContext(bgView.bounds.size)
 //        UIGraphicsBeginImageContextWithOptions(bgView.bounds.size, true, 1.0)
@@ -69,24 +73,15 @@ internal class EPrintDraw {
         UIGraphicsEndImageContext();//移除栈顶的基于当前位图的图形上下文
         return image ?? UIImage()
     }
-    
-    /// 地址信息枚举
-    enum FDAddressInfoType {
-        
-        /// 寄件
-        case SRC
-        /// 收件
-        case DST
-    }
-    
+
 }
 
 //MARK: FlashExpress绘制小标签(COD、BarCode、 寄件人信息、 收件人信息、 备注、 底部Logo)
-extension EPrintDraw {
+extension EPPaint {
     
     /// 绘制COD
     /// - Parameter data: FDTicketLabelData
-    private func drawCOD(data: FDTicketLabelData) {
+    private func drawCOD(data: FPTicketLabelData) {
         let codEnable = data.cod_enabled
         let codAmount = data.cod_amount
         if codEnable == 1 && codAmount > 0 {
@@ -105,11 +100,11 @@ extension EPrintDraw {
     
     /// 绘制条形码
     /// - Parameter data: FDTicketLabelData
-    private func drawBarCode(data: FDTicketLabelData) {
+    private func drawBarCode(data: FPTicketLabelData) {
         guard let meow_pno = data.meow_pno, !meow_pno.isEmpty else { return }
         let barcode = meow_pno
-        let newBarcode = BarcodeTools.secretPno(origin: barcode)
-        let barcodeImage = BarcodeTools.generateBarCode(IDCodeString: newBarcode)
+        let newBarcode = FP_BarcodeTools.secretPno(origin: barcode)
+        let barcodeImage = FP_BarcodeTools.generateBarCode(IDCodeString: newBarcode)
         let imageView = UIImageView.init(image: barcodeImage)
         imageView.frame = CGRect.init(x: 10, y: y, width: bgView.width-20, height: barcodeHeight)
         bgView.addSubview(imageView)
@@ -132,7 +127,7 @@ extension EPrintDraw {
     
     /// 绘制寄件人信息
     /// - Parameter data: FDLabelBaseData
-    private func drawAddressInfo(data: FDLabelBaseData, type: FDAddressInfoType = .SRC) {
+    private func drawAddressInfo(data: FPLabelBaseData, type: FPAddressInfoType = .SRC) {
         
         var srcTag = data.src_title
         var dstTag = data.dst_title
@@ -244,7 +239,7 @@ extension EPrintDraw {
     
     /// 绘制备注区域
     /// - Parameter data: FDLabelBaseData
-    private func drawRemark(data: FDLabelBaseData) {
+    private func drawRemark(data: FPLabelBaseData) {
         guard let remark = data.remark, !remark.isEmpty  else { return }
         //remarkLine1 横一
         let remarkLine1 = UIView()
@@ -267,7 +262,7 @@ extension EPrintDraw {
         remarkLine2.frame = CGRect.init(x: 2, y: remarkLabel.maxY + edge, width: bgSize.width-4, height: 1)
         bgView.addSubview(remarkLine2)
         
-        //remarkLine3  竖1   
+        //remarkLine3  竖1
         let remarkLine3 = UIView()
         remarkLine3.backgroundColor = UIColor.black
         remarkLine3.frame = CGRect.init(x: 2, y: remarkLine1.maxY, width: 1, height: remarkLine2.minY - remarkLine1.maxY)

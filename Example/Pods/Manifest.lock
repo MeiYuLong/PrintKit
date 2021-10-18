@@ -1,9 +1,9 @@
 PODS:
+  - FlashPainterKit (0.1.0)
   - MBProgressHUD (1.1.0)
-  - MYL_Jewelry (0.0.9)
-  - PrintKit (0.0.1):
+  - PrintKit (0.0.3):
+    - FlashPainterKit
     - MBProgressHUD (~> 1.1.0)
-    - MYL_Jewelry
     - SnapKit (~> 5.0.0)
   - SnapKit (5.0.1)
 
@@ -12,8 +12,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - FlashPainterKit
     - MBProgressHUD
-    - MYL_Jewelry
     - SnapKit
 
 EXTERNAL SOURCES:
@@ -21,9 +21,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  FlashPainterKit: b04b0a5987423c15af5137387449a445010cbd38
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  MYL_Jewelry: f33faf21b4a66149ad776774b8ee697fdc6e2d18
-  PrintKit: 39e25a887da2c0b1051f01e465d0dea294b750f6
+  PrintKit: 493e43eae3641e05cd022c921337b21333878fea
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
 PODFILE CHECKSUM: a05566716a7ffa531a3be02f369f224561042f05

@@ -1,15 +1,15 @@
 //
-//  FlashDraw.swift
-//  MYL_Jewelry
+//  FPPaint.swift
+//  FlashPainterKit
 //
-//  Created by yulong mei on 2021/3/10.
+//  Created by yulong mei on 2021/9/24.
 //
 
 import Foundation
 
-internal class FlashDraw {
+internal class FPPaint {
     
-    static let shared = FlashDraw()
+    static let shared = FPPaint()
     
     var multiple:CGFloat = 1
     var barcodeHeight: CGFloat = 85
@@ -53,7 +53,7 @@ internal class FlashDraw {
 //    }
     
     /// Flash PNO绘制
-    public func drawPNOLabel(data: FDTicketLabelData, _ bottomMargin: CGFloat = 0) -> UIImage {
+    public func drawPNOLabel(data: FPTicketLabelData, _ bottomMargin: CGFloat = 0) -> UIImage {
         x = 0
         y = 0
         let _ = bgView.subviews.map{ $0.removeFromSuperview() }
@@ -81,23 +81,14 @@ internal class FlashDraw {
         return image ?? UIImage()
     }
     
-    /// 地址信息枚举
-    enum FDAddressInfoType {
-        
-        /// 寄件
-        case SRC
-        /// 收件
-        case DST
-    }
-    
 }
 
 //MARK: FlashExpress绘制小标签(COD、BarCode、 寄件人信息、 收件人信息、 备注、 底部Logo)
-extension FlashDraw {
+extension FPPaint {
     
     /// 绘制COD
     /// - Parameter data: FDTicketLabelData
-    private func drawCOD(data: FDTicketLabelData) {
+    private func drawCOD(data: FPTicketLabelData) {
         let codEnable = data.cod_enabled
         let codAmount = data.cod_amount
         if codEnable == 1 && codAmount > 0 {
@@ -116,11 +107,11 @@ extension FlashDraw {
     
     /// 绘制条形码
     /// - Parameter data: FDTicketLabelData
-    private func drawBarCode(data: FDTicketLabelData) {
+    private func drawBarCode(data: FPTicketLabelData) {
         guard let meow_pno = data.meow_pno, !meow_pno.isEmpty else { return }
         let barcode = meow_pno
-        let newBarcode = BarcodeTools.secretPno(origin: barcode)
-        let barcodeImage = BarcodeTools.generateBarCode(IDCodeString: newBarcode)
+        let newBarcode = FP_BarcodeTools.secretPno(origin: barcode)
+        let barcodeImage = FP_BarcodeTools.generateBarCode(IDCodeString: newBarcode)
         let imageView = UIImageView.init(image: barcodeImage)
         imageView.frame = CGRect.init(x: 10, y: y, width: bgView.width-20, height: barcodeHeight)
         bgView.addSubview(imageView)
@@ -143,7 +134,7 @@ extension FlashDraw {
     
     /// 绘制寄件人信息
     /// - Parameter data: FDLabelBaseData
-    private func drawAddressInfo(data: FDLabelBaseData, type: FDAddressInfoType = .SRC) {
+    private func drawAddressInfo(data: FPLabelBaseData, type: FPAddressInfoType = .SRC) {
         
         var srcTag = data.src_title
         var dstTag = data.dst_title
@@ -256,7 +247,7 @@ extension FlashDraw {
     
     /// 绘制备注区域
     /// - Parameter data: FDLabelBaseData
-    private func drawRemark(data: FDLabelBaseData) {
+    private func drawRemark(data: FPLabelBaseData) {
         guard let remark = data.remark, !remark.isEmpty  else { return }
         //remarkLine1 横一
         let remarkLine1 = UIView()

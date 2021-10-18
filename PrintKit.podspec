@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PrintKit'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = '365Print & PrintKit.'
 
 # This description is used to generate tags and improve search results.
@@ -43,5 +43,5 @@ TODO: Add long description of the pod here.
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.dependency 'SnapKit', '~> 5.0.0'
   s.dependency 'MBProgressHUD', '~> 1.1.0'
-  s.dependency 'MYL_Jewelry'
+  s.dependency 'FlashPainterKit'
 end

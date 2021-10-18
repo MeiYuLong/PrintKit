@@ -1,14 +1,14 @@
 //
-//  FDLabelBaseData.swift
-//  MYL_Jewelry
+//  FPPaintModel.swift
+//  Pods-FlashPainterKit_Example
 //
-//  Created by yulong mei on 2021/3/10.
+//  Created by yulong mei on 2021/9/24.
 //
 
 import Foundation
 
 /// 绘制小标签基础数据
-public class FDLabelBaseData {
+public class FPLabelBaseData {
     
     /// 寄件信息标题，默认: From
     public var src_title: String = "From"
@@ -71,7 +71,7 @@ public class FDLabelBaseData {
 }
 
 /// Flashexpress打印运单数据
-public class FDTicketLabelData: FDLabelBaseData {
+public class FPTicketLabelData: FPLabelBaseData {
     
     /// 使用COD
     public var cod_enabled: Int = 0
@@ -81,4 +81,18 @@ public class FDTicketLabelData: FDLabelBaseData {
     
     /// 运单编号
     public var meow_pno: String?
+}
+
+/// 打印机类型--对应尺寸（2寸、3寸）
+public enum EPPrinterType: Int {
+    case P2 = 380
+    case p3 = 570
+}
+
+/// 地址信息枚举
+enum FPAddressInfoType {
+    /// 寄件
+    case SRC
+    /// 收件
+    case DST
 }
